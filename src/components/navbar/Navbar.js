@@ -47,7 +47,7 @@ const Navbar = () => {
   return (
     <Fragment>
       <Container maxWidth="custom">
-        <AppBar position="static" sx={{ background: "#422438" }}>
+        <AppBar position="absolute" sx={{ background: "#422438",backgroundColor: "transparent", boxShadow: "none" }}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
@@ -75,6 +75,8 @@ const Navbar = () => {
                 component='img'
                 src={n}
                 sx={{
+                   position : 'relative',
+                   top : {xl : '4px' , sm : '0px'},
                     width : {xl : '21px' , lg : '18px' , md : '18px'},
                     height :{xl : '24px' , lg : '20px' , md : '20px'}
                 }}
@@ -136,7 +138,7 @@ const Navbar = () => {
                 sx={{
                     position : 'absolute',
                     left : {xl : '65px' , lg : '58px', md : '58px'},
-                    top : {xl : '8px' , lg : '2px', md : '2px'},
+                    top : {xl : '4px' , lg : '2px', md : '2px'},
                     width : {xl : '21px' , lg : '18px' , md :'18px'},
                     height :{xl : '24px' , lg : '20px' , md : '20px'}
                 }}
@@ -235,7 +237,7 @@ const Navbar = () => {
                  direction='row'
                  alignItems='center'
                   sx={{
-                    width: {xl : '250.56px' , lg : '200px', md : '200px'},
+                    width: {xl : '250.56px' , lg : '250px', md : '200px'},
                     height: {xl : '42.58' , lg : '35px', md : '35px'},
                     background: "#FFF2D0",
                     opacity: 0.1,
@@ -313,7 +315,7 @@ const Navbar = () => {
                       display : {md : 'block', xs : 'none'}
                     }}
                   ></KeyboardArrowDownIcon>
-                  <Typography
+                  <Button
                     sx={{
                       ml: {sm : '20px' , md : '26px'},
                       mr: {sm : '20px' , md : '26px'},
@@ -326,11 +328,11 @@ const Navbar = () => {
 
                       textTransform: "capitalize",
 
-                      color: { xl:"#FFF2D0"},
+                      color: "#FFF2D0",
                     }}
                   >
                     Login
-                  </Typography>
+                  </Button>
 
                   <Box>
                     <Button>
