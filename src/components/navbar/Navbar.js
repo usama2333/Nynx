@@ -260,7 +260,7 @@ const Navbar = () => {
                       fontFamily: "Poppins",
                       fontStyle: "normal",
                       fontWeight: 400,
-                      fontSize: {xl : '16px', lg : '14px', md : '14px'},
+                      fontSize: {xl : '16px', lg : '16px', md : '14px'},
                       lineHeight: {xl : '24px' , lg :' 20px', md : '20px'},
                       /* identical to box height */
 
@@ -279,7 +279,7 @@ const Navbar = () => {
                       fontFamily: "Poppins",
                       fontStyle: "normal",
                       fontWeight: 400,
-                      fontSize: {xl : '16px', lg : '14px', md : '14px'},
+                      fontSize: {xl : '16px', lg : '16px', md : '14px'},
                       lineHeight: {xl : '24px' , lg :' 20px' , md : '20px'},
                       /* identical to box height */
 
@@ -296,7 +296,7 @@ const Navbar = () => {
                       fontFamily: "Poppins",
                       fontStyle: "normal",
                       fontWeight: 400,
-                      fontSize: {xl : '16px', lg : '14px', md : '14px'},
+                      fontSize: {xl : '16px', lg : '16px', md : '14px'},
                       lineHeight: {xl : '24px' , lg :' 20px' , md : '20px'},
                       /* identical to box height */
 
@@ -322,7 +322,7 @@ const Navbar = () => {
                       fontFamily: "Poppins",
                       fontStyle: "normal",
                       fontWeight: 400,
-                      fontSize: {xl : '16px', lg : '14px', md : '14px' , sm : '14px', xs : '12px'},
+                      fontSize: {xl : '16px', lg : '16px', md : '14px' , sm : '14px', xs : '12px'},
                       lineHeight: {xl : '24px' , lg :' 20px' , md : '20px' , sm : '20px'},
                       /* identical to box height */
 
@@ -341,7 +341,7 @@ const Navbar = () => {
                           fontFamily: "Poppins",
                           fontStyle: "normal",
                           fontWeight: 400,
-                          fontSize: {xl : '16px', sm : '14px' , xs : '12px'},
+                          fontSize: {xl : '16px', sm : '16px' , xs : '12px'},
                       lineHeight: {xl : '24px' , sm : '20px'},
                           /* identical to box height */
                           background: "#FFF2D0",

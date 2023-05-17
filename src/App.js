@@ -3,12 +3,16 @@ import logo from './logo.svg';
 import { Fragment } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Main from './components/main/Main';
+import Categories from './components/categories/Categories';
+import Creativity from './components/creativity/Creativity';
 
 function App() {
   return (
     <Fragment>
       <Navbar/>
       <Main/>
+      <Categories/>
+      <Creativity/>
     </Fragment>
       
    

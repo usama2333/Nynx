@@ -2,7 +2,8 @@ import { Button, Container, Typography } from "@mui/material";
 import { Stack } from "@mui/material";
 import React, { Fragment } from "react";
 import Box from "@mui/material/Box";
-import mainPic from '../../assests/images/mainPic.png'
+import mainPic from '../../assests/images/mainPic.png';
+
 const Main = () => {
   return (
     <Fragment>
@@ -15,14 +16,15 @@ const Main = () => {
         >
           <Box sx={{ flex: "0 0 50%" }}>
             <Box sx={{
-                width : {xl : '600px' , lg : '490px' , md : '400px'}
+                width : {xl : '600px' , lg : '490px' , md : '400px'},
+                ml : '40px',
                 }}>
               <Typography
                 sx={{
                   fontFamily: "Poppins",
                   fontStyle: "normal",
                   fontWeight: 500,
-                  fontSize: {xl : '48px' , lg : '40px', md : '38px', sm : '36px', xs : '30px'},
+                  fontSize: {xl : '48px' , lg : '46px', md : '38px', sm : '36px', xs : '30px'},
                   lineHeight: "100%",
                   /* or 48px */
 
@@ -38,7 +40,7 @@ const Main = () => {
                   fontFamily: "Poppins",
                   fontStyle: "normal",
                   fontWeight: 500,
-                  fontSize: {xl : '24px' , lg : '20px' , md : '18px',  sm : ' 18px', xs : '18px'},
+                  fontSize: {xl : '24px' , lg : '22px' , md : '18px',  sm : ' 18px', xs : '18px'},
                   lineHeight: "150%",
                   /* or 48px */
 
@@ -50,7 +52,7 @@ const Main = () => {
               </Typography>
             </Box>
 
-            <Stack direction='row' sx={{mt : '40px'}}>
+            <Stack direction='row' sx={{mt : '40px' , ml :'40px'}}>
             <Box>
                     <Button>
                       <Typography
@@ -59,7 +61,7 @@ const Main = () => {
                           fontStyle: "normal",
                           fontWeight: 400,
                           fontSize: {xl : '16px', sm : '14px' , xs : '12px'},
-                      lineHeight: {xl : '24px' , sm : '20px'},
+                          lineHeight: {xl : '24px' , sm : '20px'},
                           /* identical to box height */
                           background: "#FAC751",
                           textTransform: "capitalize",
