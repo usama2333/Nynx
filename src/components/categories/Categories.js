@@ -9,6 +9,25 @@ import img4 from "../../assests/images/img4.png";
 import img5 from "../../assests/images/img5.png";
 import vectorArrow from "../../assests/images/vectorArrow.png";
 
+const data = [
+  {
+    img :img1,
+    name : 'Art & Design'
+  },
+  {
+    img :img2,
+    name : 'Marketing'
+  },
+  {
+    img :img3,
+    name : 'Creative Writing'
+  },
+  {
+    img :img4,
+    name : 'Video Production'
+  },
+]
+
 const Categories = () => {
   return (
     <Fragment>
@@ -85,72 +104,22 @@ const Categories = () => {
           spacing={{ xl: 1, lg: 3, md: 1 }}
           flexWrap="wrap"
         >
-          <Box
-            sx={{
-              background: "#FFF6EC",
-              border: "1px solid rgba(66, 36, 56, 0.15)",
-              borderRadius: "10px",
-              mb: { xs: "20px", md : '20px', lg : '0px' },
-              // height : '343px',
-              // width : '292px'
-            }}
-          >
-            <Box
-              component="img"
-              src={img1}
-              sx={{
-                borderRadius: "10px",
-                mb: "30px",
-                height: {xs : '180px'  , sm : '200px'},
-                width: {xs : '230px' , sm : '250px'},
-              }}
-            ></Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                ml: "20px",
-                mb: "50px",
-              }}
-            >
-              <Typography
-                sx={{
-                  fontFamily: "Poppins",
-                  fontStyle: "normal",
-                  fontWeight: 600,
-                  fontSize: {xs :'16px' , sm : '18px' , md : '20px'},
-                  lineHeight: "100%",
-                  color: "#422438",
-                }}
-              >
-                Art & Design
-              </Typography>
-              <Box
-                component="img"
-                src={vectorArrow}
-                sx={{
-                  height: "10px",
-                  width: "5px",
-                  ml: "30px",
-                }}
-              ></Box>
-            </Box>
-          </Box>
 
+        {data.map((data) => (
+      
           <Box
             sx={{
               background: "#FFF6EC",
               border: "1px solid rgba(66, 36, 56, 0.15)",
               borderRadius: "10px",
+              mb: { xs: "20px", md : '20px', lg : '0px' },
               // height : '343px',
               // width : '292px'
-              mb: { xs: "20px", md : '20px', lg : '0px' },
             }}
           >
             <Box
               component="img"
-              src={img2}
+              src={data.img}
               sx={{
                 borderRadius: "10px",
                 mb: "30px",
@@ -177,7 +146,7 @@ const Categories = () => {
                   color: "#422438",
                 }}
               >
-                Marketing
+                {data.name}
               </Typography>
               <Box
                 component="img"
@@ -190,112 +159,10 @@ const Categories = () => {
               ></Box>
             </Box>
           </Box>
+                
+        ))}
 
-          <Box
-            sx={{
-              background: "#FFF6EC",
-              border: "1px solid rgba(66, 36, 56, 0.15)",
-              borderRadius: "10px",
-              // height : '343px',
-              // width : '292px'
-              mb: { xs: "20px", md : '20px', lg : '0px' },
-            }}
-          >
-            <Box
-              component="img"
-              src={img3}
-              sx={{
-                borderRadius: "10px",
-                mb: "30px",
-                height: {xs : '180px'  , sm : '200px'},
-                width: {xs : '230px' , sm : '250px'},
-              }}
-            ></Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                ml: "20px",
-                mb: "50px",
-              }}
-            >
-              <Typography
-                sx={{
-                  fontFamily: "Poppins",
-                  fontStyle: "normal",
-                  fontWeight: 600,
-                  fontSize: {xs :'16px' , sm : '18px' , md : '20px'},
-                  lineHeight: "100%",
-                  color: "#422438",
-                }}
-              >
-                Creative Writing
-              </Typography>
-              <Box
-                component="img"
-                src={vectorArrow}
-                sx={{
-                  height: "10px",
-                  width: "5px",
-                  ml: "30px",
-                }}
-              ></Box>
-            </Box>
-          </Box>
 
-          <Box
-            sx={{
-              background: "#FFF6EC",
-              border: "1px solid rgba(66, 36, 56, 0.15)",
-              borderRadius: "10px",
-              // height : '343px',
-              // width : '292px'
-              mb: { xs: "20px", md : '20px', lg : '0px' },
-            }}
-          >
-            <Box
-              component="img"
-              src={img4}
-              sx={{
-                borderRadius: "10px",
-                mb: "30px",
-                height: {xs : '180px'  , sm : '200px'},
-                width: {xs : '230px' , sm : '250px'},
-              }}
-            ></Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                ml: "20px",
-                mb: "50px",
-              }}
-            >
-              <Typography
-                sx={{
-                  fontFamily: "Poppins",
-                  fontStyle: "normal",
-                  fontWeight: 600,
-                  fontSize: {xs :'16px' , sm : '18px' , md : '20px'},
-                  lineHeight: "100%",
-                  color: "#422438",
-                }}
-              >
-                Video Production
-              </Typography>
-              <Box
-                component="img"
-                src={vectorArrow}
-                sx={{
-                  height: "10px",
-                  width: "5px",
-                  ml: "30px",
-                }}
-              ></Box>
-            </Box>
-          </Box>
         </Stack>
       </Container>
     </Fragment>

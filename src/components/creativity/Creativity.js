@@ -20,7 +20,7 @@ const Creativity = () => {
           sx={{
             ml: {xs : '0px' , sm : '20px' , md :'40px'},
             mr: {xs : '0px' , sm : '20px' , md :'40px'},
-            mb: "40px",
+            // mb: "40px",
             background: "#FEA87E",
             borderRadius: "15px",
             // height: "650px",

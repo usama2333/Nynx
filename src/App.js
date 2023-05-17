@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar';
 import Main from './components/main/Main';
 import Categories from './components/categories/Categories';
 import Creativity from './components/creativity/Creativity';
+import Team from './components/team/Team';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Main/>
       <Categories/>
       <Creativity/>
+      <Team/>
     </Fragment>
       
    
