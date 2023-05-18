@@ -18,6 +18,7 @@ import upper from "../../assests/images/upper.png";
 import MessageIcon from "@mui/icons-material/Message";
 import wheel from "../../assests/images/wheel.png";
 import rocket from "../../assests/images/rocket.png";
+import colon from "../../assests/images/colon.png";
 import rocketRound from "../../assests/images/rocketRound.png";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import StarIcon from "@mui/icons-material/Star";
@@ -59,6 +60,7 @@ const Team = () => {
         maxWidth="xl"
         sx={{
           background: "#E5E5E5",
+          pb :'100px'
         }}
       >
         <Stack
@@ -109,7 +111,12 @@ const Team = () => {
           </Typography>
         </Stack>
 
-        <Stack direction="row" spacing={3}>
+        <Stack
+          direction="row"
+          spacing={3}
+          flexWrap="wrap"
+          justifyContent="center"
+        >
           {/* First card */}
           <Box
             sx={{
@@ -117,12 +124,13 @@ const Team = () => {
               width: "385px",
               background: "#FFE3C5",
               borderRadius: "15px",
+              mb: "15px",
             }}
           >
             <Box
               sx={{
                 mt: "50px",
-                ml: "40px",
+                ml: { xs: "0px", md: "40px" },
                 mb: "40px",
               }}
             >
@@ -676,12 +684,13 @@ const Team = () => {
               width: "385px",
               background: "#FFE3C5",
               borderRadius: "15px",
+              mb: "15px",
             }}
           >
             <Box
               sx={{
                 mt: "50px",
-                ml: "40px",
+                ml: { xs: "0px", md: "40px" },
                 mb: "40px",
               }}
             >
@@ -974,12 +983,13 @@ const Team = () => {
               width: "385px",
               background: "#FFE3C5",
               borderRadius: "15px",
+              mt: "15px",
             }}
           >
             <Box
               sx={{
                 mt: "50px",
-                ml: "40px",
+                ml: { xs: "0px", md: "40px" },
                 mb: "40px",
               }}
             >
@@ -1051,48 +1061,57 @@ const Team = () => {
                         You will get your logo and brand guideline
                       </Typography>
                     </Stack>
-                    
-                    <Box sx={{
-                        display :'flex' , flexDirection : 'row', ml :'18px' , mt :'40px'
-                    }}>
-                        <Typography sx={{
-                             fontFamily: "Poppins",
-                          fontStyle: "normal",
-                          fontWeight: 600,
-                          fontSize: "10px",
-                          lineHeight: "136%",
-                          color: "#FFFFFF",
-                          mr : '13px'
-                        }}>
-                            Requirements
-                        </Typography>
 
-                        <Typography sx={{
-                             fontFamily: "Poppins",
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        ml: "18px",
+                        mt: "40px",
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          fontFamily: "Poppins",
                           fontStyle: "normal",
                           fontWeight: 600,
                           fontSize: "10px",
                           lineHeight: "136%",
                           color: "#FFFFFF",
-                          mr : '13px'
-                        }}>
-                            Details
-                        </Typography>
+                          mr: "13px",
+                        }}
+                      >
+                        Requirements
+                      </Typography>
 
-                        <Typography sx={{
-                             fontFamily: "Poppins",
+                      <Typography
+                        sx={{
+                          fontFamily: "Poppins",
                           fontStyle: "normal",
                           fontWeight: 600,
                           fontSize: "10px",
                           lineHeight: "136%",
                           color: "#FFFFFF",
-                        }}>
-                            Delivery & Feedback
-                        </Typography>
+                          mr: "13px",
+                        }}
+                      >
+                        Details
+                      </Typography>
+
+                      <Typography
+                        sx={{
+                          fontFamily: "Poppins",
+                          fontStyle: "normal",
+                          fontWeight: 600,
+                          fontSize: "10px",
+                          lineHeight: "136%",
+                          color: "#FFFFFF",
+                        }}
+                      >
+                        Delivery & Feedback
+                      </Typography>
                     </Box>
                   </Stack>
-
-                  
 
                   <Stack
                     direction="row"
@@ -1130,8 +1149,8 @@ const Team = () => {
                       width: "325px",
                       height: "18px",
                       background: "#cfb8c8",
-                      ml : '20px',
-                      mb : '4px'
+                      ml: "20px",
+                      mb: "4px",
                     }}
                   ></Box>
 
@@ -1140,8 +1159,8 @@ const Team = () => {
                       width: "173px",
                       height: "18px",
                       background: "#cfb8c8",
-                      ml : '20px',
-                      mb : '10px'
+                      ml: "20px",
+                      mb: "10px",
                     }}
                   ></Box>
                 </Stack>
@@ -1179,7 +1198,7 @@ const Team = () => {
                   fontFamily: "Poppins",
                   fontStyle: "normal",
                   fontWeight: 400,
-                  fontSize: "16pxpx",
+                  fontSize: "16px",
                   lineHeight: "150%",
                   color: "#422438",
                   opacity: 0.8,
@@ -1194,6 +1213,69 @@ const Team = () => {
 
           {/* End of third card data */}
         </Stack>
+
+
+
+
+        <Box
+          sx={{
+            background: "#A23842",
+            borderRadius: "15px",
+            // width: "1119px",
+            // height: "411px",
+            display :'flex',
+            flexDirection : 'column',
+            alignItems : 'center',
+            ml :{xs : '0px' , sm : '10px' , md :'50px'},
+            mr : {xs : '0px' , sm : '10px' , md : '40px'},
+            mt : '80px',
+           
+           
+          }}
+        >
+          <Box component='img' src={colon} sx={{width :'50px' , height : '30px' , mt : {xs : '50px',sm : '60px' , md :'70px' , lg :'96px'} , mb : '24px'}}></Box>
+          <Typography sx={{
+             fontFamily: "Poppins",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  fontSize: {xl : '36px' , lg : '32px' , md : '30px', sm :'28px'},
+                  lineHeight: "131%",
+                  color: "#FFF2D0",
+                  textAlign : 'center',
+                  ml : {xl : '90px' , lg : '80px' , md: '70px',sm :'60px'},
+                  mr : {xl : '90px' , lg : '80px' , md: '70px',sm :'60px'},
+          }}>
+          Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime
+          </Typography>
+
+          <Typography sx={{
+              fontFamily: "Poppins",
+                  fontStyle: "normal",
+                  fontWeight: 600,
+                  fontSize: {xs : '16px' , sm :'18px' , md : '20px'},
+                  lineHeight: "131%",
+                  color: "#FAC751",
+                  mt : '24px',
+                  mb : '4px'
+          }}>
+          Lao Tzu
+          </Typography>
+
+          <Typography sx={{
+              fontFamily: "Poppins",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  fontSize: {xs :'12px',sm :'14px' },
+                  lineHeight: "150%",
+                  color: "#FFF2D0",
+                  mb : {xs :'40px' , sm :'50px' , md :'70px' , lg : '80px'}
+                 
+          }}>
+         Chinese Philosopher
+          </Typography>
+
+        </Box>
+       
       </Container>
     </Fragment>
   );
