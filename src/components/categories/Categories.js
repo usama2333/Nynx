@@ -99,9 +99,9 @@ const Categories = () => {
             ml: {  xs: "50px" , sm : '60px' },
           }}
           direction="row"
-          // justifyContent='center'
-          // alignItems = {{xs : 'center' , sm :'none'}}
-          spacing={{ xl: 1, lg: 3, md: 1 }}
+          justifyContent='space-around'
+          alignItems = 'center'
+          // spacing={{ xl: 1, lg: 3, md: 1 }}
           flexWrap="wrap"
         >
 

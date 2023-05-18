@@ -7,6 +7,10 @@ import Categories from './components/categories/Categories';
 import Creativity from './components/creativity/Creativity';
 import Team from './components/team/Team';
 import Skills from './components/skills/Skills';
+import Freelancers from './components/freelancers/Freelancers';
+import Proposition from './components/proposition/Proposition';
+import Toprated from './components/toprated/Toprated';
+import Getstarted from './components/getStarted/Getstarted';
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
       <Creativity/>
       <Team/>
       <Skills/>
+      <Freelancers/>
+      <Proposition/>
+      <Toprated/>
+      <Getstarted/>
     </Fragment>
       
    

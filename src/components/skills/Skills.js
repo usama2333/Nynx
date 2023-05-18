@@ -80,7 +80,7 @@ const Skills = () => {
         <Box
           sx={{
             pt: "70px",
-            ml: { xs: "20px", sm: "50px" },
+            // ml: { xs: "20px", sm: "50px" },
             pb: "70px",
           }}
         >
@@ -92,6 +92,7 @@ const Skills = () => {
               fontSize: { xs: "30px", md: "35px", lg: "45px", xl: "45px" },
               lineHeight: "100%",
               color: "#422438",
+              ml: { xs: "20px", sm: "30px" },
             }}
           >
             Get inspired with skillsets made by our
@@ -104,6 +105,7 @@ const Skills = () => {
               fontSize: { xs: "30px", md: "35px", lg: "45px", xl: "45px" },
               lineHeight: "100%",
               color: "#422438",
+              ml: { xs: "20px", sm: "30px" },
             }}
           >
             Experts
@@ -112,7 +114,9 @@ const Skills = () => {
           <Stack
             direction="row"
             flexWrap="wrap"
-            spacing={2}
+            // spacing={2}
+            justifyContent='space-evenly'
+            alignItems='center'
             sx={{ mt: "40px" }}
           >
             {data.map((data) => (

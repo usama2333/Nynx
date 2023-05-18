@@ -67,7 +67,7 @@ const Team = () => {
           direction="column"
           alignItems="center"
           sx={{
-            pt: "150px",
+            pt: {xs : '50px' , sm :'150px'},
           }}
         >
           <Typography
@@ -113,9 +113,11 @@ const Team = () => {
 
         <Stack
           direction="row"
-          spacing={3}
+          // spacing={3}
+          justifyContent='space-evenly'
+            alignItems='center'
           flexWrap="wrap"
-          justifyContent="center"
+          
         >
           {/* First card */}
           <Box
@@ -640,6 +642,7 @@ const Team = () => {
                   fontSize: "30px",
                   lineHeight: "131%",
                   color: "#422438",
+                  ml : {xs : '20px' , md : '0px'}
                 }}
               >
                 Create your
@@ -653,6 +656,7 @@ const Team = () => {
                   fontSize: "30px",
                   lineHeight: "131%",
                   color: "#422438",
+                  ml : {xs : '20px' , md : '0px'}
                 }}
               >
                 Work Space
@@ -668,6 +672,7 @@ const Team = () => {
                   color: "#422438",
                   opacity: 0.8,
                   mt: "12px",
+                  ml : {xs : '20px' , md : '0px'}
                 }}
               >
                 Create your virtual room to kick start your project. Post a job.
@@ -936,6 +941,7 @@ const Team = () => {
                   fontSize: "30px",
                   lineHeight: "131%",
                   color: "#422438",
+                  ml : {xs : '20px' , md : '0px'}
                 }}
               >
                 Build your Team
@@ -949,6 +955,7 @@ const Team = () => {
                   fontSize: "30px",
                   lineHeight: "131%",
                   color: "#422438",
+                  ml : {xs : '20px' , md : '0px'}
                 }}
               >
                 & Assign Tasks
@@ -964,6 +971,7 @@ const Team = () => {
                   color: "#422438",
                   opacity: 0.8,
                   mt: "12px",
+                  ml : {xs : '20px' , md : '0px'}
                 }}
               >
                 In workspace you can assign tasks to build a team and add
@@ -983,7 +991,7 @@ const Team = () => {
               width: "385px",
               background: "#FFE3C5",
               borderRadius: "15px",
-              mt: "15px",
+              mt: "-15px",
             }}
           >
             <Box
@@ -1175,6 +1183,7 @@ const Team = () => {
                   fontSize: "30px",
                   lineHeight: "131%",
                   color: "#422438",
+                  ml : {xs : '20px' , md : '0px'}
                 }}
               >
                 Manage Tasks and
@@ -1188,6 +1197,7 @@ const Team = () => {
                   fontSize: "30px",
                   lineHeight: "131%",
                   color: "#422438",
+                  ml : {xs : '20px' , md : '0px'}
                 }}
               >
                 Get Results
@@ -1203,6 +1213,7 @@ const Team = () => {
                   color: "#422438",
                   opacity: 0.8,
                   mt: "12px",
+                  ml : {xs : '20px' , md : '0px'}
                 }}
               >
                 Once you've found someone who fits your needs, manage your tasks
