@@ -11,10 +11,12 @@ import Freelancers from './components/freelancers/Freelancers';
 import Proposition from './components/proposition/Proposition';
 import Toprated from './components/toprated/Toprated';
 import Getstarted from './components/getStarted/Getstarted';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
     <Fragment>
+    
       <Navbar/>
       <Main/>
       <Categories/>
@@ -25,6 +27,8 @@ function App() {
       <Proposition/>
       <Toprated/>
       <Getstarted/>
+      <Footer/>
+
     </Fragment>
       
    
