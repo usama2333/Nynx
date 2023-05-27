@@ -12,6 +12,7 @@ import Proposition from './components/proposition/Proposition';
 import Toprated from './components/toprated/Toprated';
 import Getstarted from './components/getStarted/Getstarted';
 import Footer from './components/footer/Footer';
+import Caro from './components/caro/Caro';
 
 function App() {
   return (

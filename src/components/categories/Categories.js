@@ -2,31 +2,14 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import React, { Fragment } from "react";
 import leftArrow from "../../assests/images/leftArrow.png";
 import rightArrow from "../../assests/images/rightArrow.png";
-import img1 from "../../assests/images/img1.png";
-import img2 from "../../assests/images/img2.png";
-import img3 from "../../assests/images/img3.png";
-import img4 from "../../assests/images/img4.png";
-import img5 from "../../assests/images/img5.png";
-import vectorArrow from "../../assests/images/vectorArrow.png";
 
-const data = [
-  {
-    img :img1,
-    name : 'Art & Design'
-  },
-  {
-    img :img2,
-    name : 'Marketing'
-  },
-  {
-    img :img3,
-    name : 'Creative Writing'
-  },
-  {
-    img :img4,
-    name : 'Video Production'
-  },
-]
+import vectorArrow from "../../assests/images/vectorArrow.png";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import Caro from "../caro/Caro";
+import { data, responsive } from "./style";
+
+
 
 const Categories = () => {
   return (
@@ -37,14 +20,13 @@ const Categories = () => {
           background: "#E5E5E5",
           pt: { xs: "60px", sm: "70px", md: "100px" },
           pb: { sm: "70px", xs: "30px" },
-          
         }}
       >
         <Stack
           direction={{ sm: "row", xs: "column" }}
           alignItems="center"
-          sx={{ml :'60px'}}
-        //   justifyContent="space-around"
+          sx={{ ml: "60px" }}
+          //   justifyContent="space-around"
         >
           <Typography
             sx={{
@@ -93,7 +75,7 @@ const Categories = () => {
           </Box>
         </Stack>
 
-        <Stack
+        {/* <Stack
           sx={{
             mt: "40px",
             ml: {  xs: "50px" , sm : '60px' },
@@ -162,8 +144,18 @@ const Categories = () => {
                 
         ))}
 
+        </Stack> */}
 
-        </Stack>
+        <Box sx={{
+          mt: "40px",
+            // ml: {  xs: "50px" , sm : '60px' },
+        }}>
+          <Carousel responsive={responsive} autoPlay={true} autoPlaySpeed={2000}>
+            {data.map((data)=> (
+              <Caro name={data.name} img={data.img}/>
+            ))}
+          </Carousel>
+        </Box>
       </Container>
     </Fragment>
   );

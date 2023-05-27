@@ -3,8 +3,25 @@ import { Stack } from "@mui/material";
 import React, { Fragment } from "react";
 import Box from "@mui/material/Box";
 import mainPic from '../../assests/images/mainPic.png';
+import Modal from '@mui/material/Modal';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+  borderRadius : '30px'
+};
 
 const Main = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpenn = () => setOpen(true);
+  const handleClosee = () => setOpen(false);
   return (
     <Fragment>
       <Container maxWidth="xl" sx={{ background: "#422438" }}>
@@ -54,7 +71,7 @@ const Main = () => {
 
             <Stack direction='row' sx={{mt : '40px' , ml :'40px'}}>
             <Box>
-                    <Button>
+                    <Button onClick={handleOpenn}>
                       <Typography
                         sx={{
                           fontFamily: "Poppins",
@@ -80,7 +97,7 @@ const Main = () => {
                 </Box>
 
                 <Box>
-                    <Button>
+                    <Button onClick={handleOpenn}>
                       <Typography
                         sx={{
                           fontFamily: "Poppins",
@@ -127,6 +144,38 @@ const Main = () => {
             </Box>
           </Box>
         </Stack>
+        <Box sx={{
+          borderRadius : '100px'
+        }}>
+        <Modal
+        open={open}
+        onClose={handleClosee}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography sx={{
+                  fontFamily: "Poppins",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  fontSize:'26px',
+                  lineHeight: "100%",
+                  /* or 48px */
+
+                  color: "red",
+                  mb : '20px'
+                }} id="modal-modal-title" variant="h6" component="h2">
+          Welcome to NYNX! The new home for freelancers.
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          Our platform is currently under construction at the moment, but please subscribe to our waiting list at the bottom of this page to receive news of our upcoming launch, exciting features which we think you'll love, and discounts on our platform fees..
+          </Typography>
+          <Typography>
+          Don't miss out on the NYNX revolution!
+          </Typography>
+        </Box>
+      </Modal>
+        </Box>
       </Container>
     </Fragment>
   );

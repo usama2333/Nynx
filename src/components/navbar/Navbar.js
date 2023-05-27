@@ -1,5 +1,5 @@
 import { Stack, Typography } from "@mui/material";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -21,6 +21,25 @@ import dot from '../../assests/images/dot.png';
 import nsecond from '../../assests/images/nsecond.png';
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from '@mui/icons-material/Search';
+import { notificationList } from "./style";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Modal from '@mui/material/Modal';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+  borderRadius : '30px'
+};
+
+const notify = (error) => toast('Sign in Successfully');
 
 const pages = ["Find Services", "About Nynx", "How it works"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -28,6 +47,16 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+   const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -44,6 +73,15 @@ const Navbar = () => {
     setAnchorElUser(null);
   };
 
+  const signInHandler = () => {
+    
+    notify();
+    
+  }
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpenn = () => setOpen(true);
+  const handleClosee = () => setOpen(false);
   return (
     <Fragment>
       <Container maxWidth="custom">
@@ -308,14 +346,21 @@ const Navbar = () => {
                   >
                     How It Works
                   </Typography>
-                  <KeyboardArrowDownIcon
+                  <Box>
+                  <KeyboardArrowDownIcon onClick={handleClick}
                     sx={{
-                      width: "16.37px",
-                      height: "15.19px",
-                      display : {md : 'block', xs : 'none'}
+                      // width: "16.37px",
+                      // height: "15.19px",
+                      display : {md : 'flex', xs : 'none'}
                     }}
                   ></KeyboardArrowDownIcon>
-                  <Button
+                   {/* <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
+                    <Typography sx={notificationList}  onClick={handleClose}></Typography>
+                    <Typography sx={notificationList} onClick={handleClose}>50</Typography>
+                    <Typography  sx={notificationList} onClick={handleClose}>Cu</Typography>
+                    </Menu> */}
+                    </Box>
+                  <Button onClick={signInHandler}
                     sx={{
                       ml: {sm : '20px' , md : '26px'},
                       mr: {sm : '20px' , md : '26px'},
@@ -335,7 +380,7 @@ const Navbar = () => {
                   </Button>
 
                   <Box>
-                    <Button>
+                    <Button onClick={handleOpenn}>
                       <Typography
                         sx={{
                           fontFamily: "Poppins",
@@ -360,6 +405,39 @@ const Navbar = () => {
             </Toolbar>
           </Container>
         </AppBar>
+        <ToastContainer/>
+        <Box sx={{
+          borderRadius : '100px'
+        }}>
+        <Modal
+        open={open}
+        onClose={handleClosee}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography sx={{
+                  fontFamily: "Poppins",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  fontSize:'26px',
+                  lineHeight: "100%",
+                  /* or 48px */
+
+                  color: "red",
+                  mb : '20px'
+                }} id="modal-modal-title" variant="h6" component="h2">
+          Welcome to NYNX! The new home for freelancers.
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          Our platform is currently under construction at the moment, but please subscribe to our waiting list at the bottom of this page to receive news of our upcoming launch, exciting features which we think you'll love, and discounts on our platform fees..
+          </Typography>
+          <Typography>
+          Don't miss out on the NYNX revolution!
+          </Typography>
+        </Box>
+      </Modal>
+        </Box>
       </Container>
     </Fragment>
   );
