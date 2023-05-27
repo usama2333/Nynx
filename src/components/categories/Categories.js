@@ -150,7 +150,7 @@ const Categories = () => {
           mt: "40px",
             // ml: {  xs: "50px" , sm : '60px' },
         }}>
-          <Carousel responsive={responsive} autoPlay={true} autoPlaySpeed={2000}>
+          <Carousel responsive={responsive} ssr={true}  autoPlay={true} autoPlaySpeed={2000}>
             {data.map((data)=> (
               <Caro name={data.name} img={data.img}/>
             ))}

@@ -1,102 +1,28 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
-import React, { Fragment } from "react";
-
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { data, responsive } from "./style";
-import SkillsCard from "./SkillsCard";
+import { Box, Stack, Typography } from '@mui/material'
+import React, { Fragment } from 'react'
+import { data, responsive } from './style'
 
 
-
-
-const Skills = () => {
+const SkillsCard = (props) => {
   return (
     <Fragment>
-      <Container
-        maxWidth="xl"
-        sx={{
-          background: "#FFE3C5",
-          //  height : '699px',
-        }}
-      >
-        <Box
-          sx={{
-            pt: "70px",
-            // ml: { xs: "20px", sm: "50px" },
-            pb: "70px",
-          }}
-        >
-          <Typography
-            sx={{
-              fontFamily: "Poppins",
-              fontStyle: "normal",
-              fontWeight: 500,
-              fontSize: { xs: "30px", md: "35px", lg: "45px", xl: "45px" },
-              lineHeight: "100%",
-              color: "#422438",
-              ml: { xs: "20px", sm: "30px" },
-            }}
-          >
-            Get inspired with skillsets made by our
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Poppins",
-              fontStyle: "normal",
-              fontWeight: 500,
-              fontSize: { xs: "30px", md: "35px", lg: "45px", xl: "45px" },
-              lineHeight: "100%",
-              color: "#422438",
-              ml: { xs: "20px", sm: "30px" },
-            }}
-          >
-            Experts
-          </Typography>
+    <Box sx={{ml : {xs : '30px' , sm : '20px' , md : '20px' } }}>
 
 
-          <Box sx={{
-          mt: "40px",
-            // ml: {  xs: "50px" , sm : '60px' },
-        }}>
-          <Carousel responsive={responsive} ssr={true} showDots={true} autoPlay={true} autoPlaySpeed={2000}>
-            {data.map((data)=> (
-              <SkillsCard 
-              name={data.name} 
-              img={data.img} 
-              logo={data.logo} 
-              sur={data.sur} 
-              text1={data.text1}
-              text2={data.text2}
-              reviews={data.reviews}
-              fixed = {data.fixed}
-              fixedPrice = {data.fixedPrice}
-              monthly={data.monthly}
-              monthlyPrice={data.monthlyPrice}
-              />
-            ))}
-          </Carousel>
-        </Box>
-
-          {/* <Stack
-            direction="row"
-            flexWrap="wrap"
-            // spacing={2}
-            justifyContent='space-evenly'
-            alignItems='center'
-            sx={{ mt: "40px" }}
-          >
-            {data.map((data) => (
-              <Box
+    <Box
                 sx={{
                   width: "290px",
                   height: "390px",
+                // width : '100%',
                   border: "1px solid rgba(66, 36, 56, 0.15)",
                   borderRadius: "10px",
                   background: "#FFFFFF",
                   mb: "40px",
                 }}
               >
-                <Box component="img" src={data.img}></Box>
+                <Box sx={{
+                    borderRadius : '10px'
+                }} component="img" src={props.img}></Box>
 
                 <Box
                   sx={{
@@ -107,7 +33,7 @@ const Skills = () => {
                 >
                   <Box
                     component="img"
-                    src={data.logo}
+                    src={props.logo}
                     sx={{
                       height: "36px",
                       width: "36px",
@@ -126,7 +52,7 @@ const Skills = () => {
                         color: "#422438",
                       }}
                     >
-                      {data.name}
+                      {props.name}
                     </Typography>
 
                     <Typography
@@ -140,7 +66,7 @@ const Skills = () => {
                         opacity: 0.5,
                       }}
                     >
-                      {data.sur}
+                      {props.sur}
                     </Typography>
                   </Box>
                 </Box>
@@ -157,7 +83,7 @@ const Skills = () => {
                     mt: "10px",
                   }}
                 >
-                  {data.text1}
+                  {props.text1}
                 </Typography>
                 <Typography
                   sx={{
@@ -170,7 +96,7 @@ const Skills = () => {
                     ml: "20px",
                   }}
                 >
-                  {data.text2}
+                  {props.text2}
                 </Typography>
                 <Typography
                   sx={{
@@ -186,7 +112,7 @@ const Skills = () => {
                     mb: "12px",
                   }}
                 >
-                  {data.reviews}
+                  {props.reviews}
                 </Typography>
 
                 <Box
@@ -218,7 +144,7 @@ const Skills = () => {
                         opacity: 0.8,
                       }}
                     >
-                      {data.fixed}
+                      {props.fixed}
                     </Typography>
                     <Typography
                       sx={{
@@ -231,7 +157,7 @@ const Skills = () => {
                         opacity: 0.8,
                       }}
                     >
-                      {data.fixedPrice}
+                      {props.fixedPrice}
                     </Typography>
                   </Box>
 
@@ -247,7 +173,7 @@ const Skills = () => {
                         opacity: 0.8,
                       }}
                     >
-                      {data.monthly}
+                      {props.monthly}
                     </Typography>
                     <Typography
                       sx={{
@@ -260,18 +186,19 @@ const Skills = () => {
                         opacity: 0.8,
                       }}
                     >
-                      {data.monthlyPrice}
+                      {props.monthlyPrice}
                     </Typography>
                   </Box>
                 </Stack>
               </Box>
-            ))}
-          </Stack> */}
 
-        </Box>
-      </Container>
+
+
+
+    </Box>
+      
     </Fragment>
-  );
-};
+  )
+}
 
-export default Skills;
+export default SkillsCard

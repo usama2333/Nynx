@@ -7,7 +7,7 @@ import { arrowBox, imgBox, mainBox, textMainDiv, textName } from "./style";
 const Caro = (props) => {
   return (
     <Fragment>
-    <Box sx={{ml : '40px'}}>
+    <Box sx={{ml : {xs : '10px' , sm : '20px' , md : '40px'} , mr : {xs :'10px'}}}>
       <Box sx={mainBox}>
         <Box component="img" src={props.img} sx={imgBox}></Box>
         <Box sx={textMainDiv}>
