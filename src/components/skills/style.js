@@ -141,3 +141,136 @@ export const data = [
       items: 1,
     },
   };
+
+  export const inspiredText = {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: { xs: "30px", md: "35px", lg: "45px", xl: "45px" },
+    lineHeight: "100%",
+    color: "#422438",
+    ml: { xs: "20px", sm: "30px" },
+  }
+
+  export const expertText = {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: { xs: "30px", md: "35px", lg: "45px", xl: "45px" },
+    lineHeight: "100%",
+    color: "#422438",
+    ml: { xs: "20px", sm: "30px" },
+  }
+  
+
+  export const imgBox = {
+    width: "290px",
+    height: "390px",
+  // width : '100%',
+    border: "1px solid rgba(66, 36, 56, 0.15)",
+    borderRadius: "10px",
+    background: "#FFFFFF",
+    mb: "40px",
+  }
+
+  export const logoSx = {
+    height: "36px",
+    width: "36px",
+    ml: "20px",
+    mr: "3px",
+  }
+
+  export const nameSx = {
+    fontFamily: "Poppins",
+                        fontStyle: "normal",
+                        fontWeight: 600,
+                        fontSize: "14px",
+                        lineHeight: "136%",
+                        color: "#422438",
+  }
+
+  export const surSx = {
+    
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "14px",
+    lineHeight: "130%",
+    color: "#422438",
+    opacity: 0.5,
+  }
+
+  export const textSx = {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: "16px",
+    lineHeight: "130%",
+    color: "#422438",
+    ml: "20px",
+    mt: "10px",
+  }
+
+  export const text2Sx = {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: "16px",
+    lineHeight: "130%",
+    color: "#422438",
+    ml: "20px",
+  }
+
+  export const reviewsSx = {
+    fontFamily: "Poppins",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    fontSize: "14px",
+                    lineHeight: "130%",
+                    color: "#422438",
+                    ml: "20px",
+                    opacity: 0.5,
+                    mt: "6px",
+                    mb: "12px",
+  }
+
+  export const fixedSx = {
+    fontFamily: "Poppins",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        fontSize: "14px",
+                        lineHeight: "122%",
+                        color: "#000000",
+                        opacity: 0.8,
+  }
+
+  export const fixedPriceSx = {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: "14px",
+    lineHeight: "122%",
+    color: "#000000",
+    opacity: 0.8,
+  }
+
+  export const monthlySx = {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "14px",
+    lineHeight: "122%",
+    color: "#000000",
+    opacity: 0.8,
+  }
+
+  export const monthlyPriceSx = {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: "14px",
+    lineHeight: "122%",
+    color: "#000000",
+    opacity: 0.8,
+  }
+  
